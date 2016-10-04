@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML From</title>
+    <link rel="stylesheet" href=bootstrap.min.css>
+    <link href="first_form.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h2> User Login</h2>
+<form method="GET" action="http://requestb.in/zvgzimzv">
+    <p>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" class="form-control" placeholder="Username" required autofocus>
+    </div>
+    </p>
+    <p>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
+    </div>
+    </p>
+    <p>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </p>
+</form>
+</div>
+<p>
+<h2>Compose an email</h2>
+<form method="GET" action="http://requestb.in/zvgzimzv">
+    <label for="To">To:</label>
+    <input id="To" name="To" type="text">
+    <p>
+        <label for="From">From:</label>
+        <input id="From" name="From" type="text">
+    </p>
+    <p>
+        <label for="Subject">Subject:</label>
+        <input id="Subject" name="Subject" type="text">
+    </p>
+    <p>
+        <label for="Body">Body:</label>
+        <textarea id="Body" name="email_body" rows="5" cols="40">Content Here</textarea>
+        <input type="checkbox" id="sent_folder" name="sent_folder" value="yes" checked>
+        <label for="sent_folder">Add to sent folder?</label>
+    </p>
+    <input type="submit">
+    <h2>Multiple Choice test</h2>
+</form method="POST" action="http://requestb.in/1fxvbgv1">
+<form method="post" action="http://requestb.in/1fxvbgv1">
+    <p>Who won the NBA championship last season?</p>
+    <label>
+        <input type="radio" name="q1" value="spurs">
+        SA Spurs
+    </label>
+    <p>
+        <label>
+            <input type="radio" name="q1" value="cavs">
+            Cleveland Cavaliers
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="q1" value="thunder">
+            OKC Thunder
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="q1" value="warriors">
+            GS Warriors
+        </label>
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+<form method="post" action="http://requestb.in/1fxvbgv1"
+<p>
+<h2>Select Testing</h2>
+</p>
+<label for="codeup">Do you like Codeup?</label>
+<select id="codeup" name="codeup">
+    <option value="1" selected>Yes</option>
+    <option value="0">No</option>
+</select>
+<p>
+    <input type="submit">
+</p>
+</form>
+<form method="post" action="http://requestb.in/1fxvbgv1">
+    <p>
+        <label for="champs">Which teams have won NBA championships?</label>
+        <select id="champs" name="champs[]" multiple>
+            <option value="spurs">SA Spurs</option>
+            <option value="warriors">GS Warriors</option>
+            <option value="timberwolves">Minnesota Timberwolves</option>
+            <option value="cavs">Cleveland Cavs</option>
+        </select>
+        <input type="submit">
+    </p>
+</form>
+</body>
+</html>
