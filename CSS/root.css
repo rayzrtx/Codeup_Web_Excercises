@@ -1,0 +1,42 @@
+.formbox{
+    width: 900px;
+    height: 85px;
+    text-align: center;
+    padding: 100px;
+    border: 1px solid black;
+    margin-left: 20px;
+    color: white;
+    background-size: cover;
+
+}
+
+li{
+    display: inline;
+    padding: 20px;
+}
+
+.left{
+    width: 55%;
+    height: 00px;
+    margin-left: 20px;
+    font-size: large;
+
+}
+.right{
+    width: 225px;
+    height: 600px;
+    float: right;
+    margin-right: 300px;
+}
+.bottom{
+    border: 3px solid black;
+    padding: 50px;
+    width: 1000px;
+    height: 30px;
+    margin-top: 300px;
+    margin-left: 20px;
+    clear: both;
+}
+footer{
+    text-align: center;
+}

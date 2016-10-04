@@ -1,0 +1,37 @@
+h1 {
+    color: aquamarine;
+}
+
+h2 {
+    color: aqua;
+}
+body{
+    background-color: gray;
+    background-image: url(img/delorean.jpg);
+    background-repeat: space;
+    font-family: "Courier New";
+}
+ol{
+    list-style: square;
+}
+ul{list-style: georgian;}
+
+.dechex{
+    padding: 50px;
+    font-family: "Times New Roman";
+    color: red;
+    border: double;
+    font-size: 20px;
+}
+
+a:link{
+    color: orange;
+}
+a:hover{
+    color: black;
+}
+a:visited{
+    color: orangered;
+}
+
+

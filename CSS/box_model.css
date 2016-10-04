@@ -1,0 +1,38 @@
+div {
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+}
+div.red{
+    background-color: red;
+}
+div.orange{
+    background-color: orange;
+    position: relative;
+    left: 30px;
+}
+div.yellow{
+    background-color: yellow;
+    position: relative;
+    left: 60px;
+}
+div.green{
+    background-color: green;
+    position: relative;
+    left: 90px;
+}
+div.blue{
+    background-color: blue;
+    position: relative;
+    left: 120px;
+}
+div.violet{
+    background-color: violet;
+    position: relative;
+    left: 150px;
+}
+
