@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>My First HTML From</title>
+    <link rel="stylesheet" href=bootstrap.min.css>
+    <link href="first_form.css" rel="stylesheet">
 </head>
 <body>
-<h2> User Login</h2>
+<div class="container">
+    <h2> User Login</h2>
+    <form method="GET" action="http://requestb.in/zvgzimzv">
+        <p>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" class="form-control" placeholder="Username" required
+                   autofocus>
+        </div>
+        </p>
+        <p>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
+        </div>
+        </p>
+        <p>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </p>
+    </form>
+</div>
+<p>
+<h2>Compose an email</h2>
 <form method="GET" action="http://requestb.in/zvgzimzv">
-    <p>
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" required autofocus>
-    </p>
-    <p>
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" required>
-    </p>
-    <p>
-        <input type="submit">
-    </p>
-</form>
-    <p>
-    <h2>Compose an email</h2>
-<form method="GET" action="http://requestb.in/zvgzimzv">
-        <label for="To">To:</label>
-        <input id="To" name="To" type="text">
+    <label for="To">To:</label>
+    <input id="To" name="To" type="text">
     <p>
         <label for="From">From:</label>
         <input id="From" name="From" type="text">
@@ -45,23 +54,23 @@
     <p>Who won the NBA championship last season?</p>
     <label>
         <input type="radio" name="q1" value="spurs">
-               SA Spurs
+        SA Spurs
     </label>
     <p>
         <label>
-        <input type="radio" name="q1" value="cavs">
-        Cleveland Cavaliers
+            <input type="radio" name="q1" value="cavs">
+            Cleveland Cavaliers
         </label>
     </p>
     <p>
         <label>
-        <input type="radio" name="q1" value="thunder">
-        OKC Thunder
+            <input type="radio" name="q1" value="thunder">
+            OKC Thunder
         </label>
     </p>
     <p>
         <label>
-        <input type="radio" name="q1" value="warriors">
+            <input type="radio" name="q1" value="warriors">
             GS Warriors
         </label>
     </p>
@@ -70,17 +79,17 @@
     </p>
 </form>
 <form method="post" action="http://requestb.in/1fxvbgv1"
-    <p>
-    <h2>Select Testing</h2>
-    </p>
-        <label for="codeup">Do you like Codeup?</label>
-        <select id="codeup" name="codeup">
-            <option value="1"selected>Yes</option>
-            <option value="0">No</option>
-        </select>
-    <p>
-        <input type="submit">
-    </p>
+<p>
+<h2>Select Testing</h2>
+</p>
+<label for="codeup">Do you like Codeup?</label>
+<select id="codeup" name="codeup">
+    <option value="1" selected>Yes</option>
+    <option value="0">No</option>
+</select>
+<p>
+    <input type="submit">
+</p>
 </form>
 <form method="post" action="http://requestb.in/1fxvbgv1">
     <p>
