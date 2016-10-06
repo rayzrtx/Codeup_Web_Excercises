@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS',verdana, sans-serif;
+}
+
+.col-md-4{
+    background-color: #999f8e;
+    text-align: left;
+    float: left;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    padding: 20px;
+}
+
+.col-md-8{
+    background-color: #d2d8c7;
+    text-align: left;
+    float: right;
+    width: 80%;
+    height: 800px;
+
+
+}
+
+ul{
+    list-style-type: none;
+}
