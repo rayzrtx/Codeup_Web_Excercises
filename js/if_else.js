@@ -32,3 +32,14 @@ if (flipACoin==0){
 }
 else    console.log(buyAHouse);
 
+var grade1=70;
+var grade2=60;
+var grade3=75;
+var amountOfGrades=3;
+var avgGrade=(grade1+grade2+grade3)/amountOfGrades;
+var message="You need to practice more!"
+if(avgGrade>80){
+    message="You're awesome!";
+}
+
+console.log(message);
