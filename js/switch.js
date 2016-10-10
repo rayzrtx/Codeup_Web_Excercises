@@ -32,7 +32,7 @@ switch (luckynumber)
     console.log(luckynumber);
     console.log(payment);
 
-var monthNumber=Math.floor(Math.random()*12)+1;
+var monthNumber=Math.floor((Math.random()*12)+1);
 var monthName="December";
 switch (monthNumber) {
     case 1:
@@ -71,3 +71,4 @@ switch (monthNumber) {
 }
 console.log(monthNumber);
 console.log(monthName);
+

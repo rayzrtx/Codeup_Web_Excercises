@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While Loop</title>
+</head>
+<body>
+<script> /* src=js/while_loop.js */
+    var number=2;
+    while (number<=65536){
+        console.log(number);
+        number=number*2
+    }
+
+    var totalBottles=99;
+    do {
+        console.log(totalBottles+" bottles of beer on the wall. "+totalBottles+" bottles of beer. Take one down, pass it around. "+
+                (totalBottles-1)+" bottles of beer on the wall.");
+        totalBottles=totalBottles-1
+    }
+    while (totalBottles>2);
+    if (totalBottles==2){
+        console.log(totalBottles+" bottles of beer on the wall. "+totalBottles+" bottles of beer. Take one down, pass it around. "+
+                (totalBottles-1)+" bottle of beer on the wall.");
+        totalBottles=1
+    }
+    console.log(totalBottles+" bottle of beer on the wall. "+totalBottles+" bottle of beer. Take one down, pass it around. No more bottles of beer on the wall. Time to go to HEB!");
+
+
+</script>
+</body>
+</html>
