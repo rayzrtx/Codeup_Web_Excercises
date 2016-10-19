@@ -19,6 +19,8 @@ var minusSymbol = document.getElementById("minus");
 var multiplySymbol = document.getElementById("multiply");
 var divideSymbol = document.getElementById("divide");
 var clearButton = document.getElementById("clear");
+var equalsButton = document.getElementById("equals");
+
 
 number1.addEventListener("click", textOne);         //When each button is clicked, it will run the function to display the number
 number2.addEventListener("click", textTwo);
@@ -36,6 +38,7 @@ minusSymbol.addEventListener("click", textMinus);
 multiplySymbol.addEventListener("click", textMultiply);
 divideSymbol.addEventListener("click", textDivide);
 clearButton.addEventListener("click", clearAll);
+equalsButton.addEventListener("click", hitEqualsButton);
 
 //functions to display each individual number on either side of operator
     function textOne () {
@@ -167,4 +170,36 @@ function textDivide () {
 }
 function clearAll() {
         document.getElementById("calculator").reset();  //clear all windows in form
+}
+function hitEqualsButton() {
+    var leftBox = document.getElementById("firstbox");
+    var rightBox = document.getElementById("thirdbox");
+    var middleBox = document.getElementById("operatorbox");
+    var add = function (a, b) {
+        return a + b;
+    };
+    var subtract = function (a, b) {
+        return a - b;
+    };
+    var multiply = function (a, b) {
+        return a * b;
+    };
+    var divide = function (a, b) {
+        return a / b;
+    };
+
+    if (middleBox.value == "+") {
+        leftBox.value= add(parseFloat(leftBox.value), parseFloat(rightBox.value))
+    }
+    if (middleBox.value == "-") {
+        leftBox.value = subtract(parseFloat(leftBox.value), parseFloat(rightBox.value))
+    }
+    if (middleBox.value == "*"){
+        leftBox.value = multiply(parseFloat(leftBox.value), parseFloat(rightBox.value))
+    }
+    if (middleBox.value == "/"){
+        leftBox.value = divide(parseFloat(leftBox.value), parseFloat(rightBox.value))
+    }
+    rightBox.value = "";
+    middleBox.value = "";
 }
