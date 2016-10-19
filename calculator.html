@@ -5,9 +5,9 @@
     <title>Fancy Caluculator</title>
     <style>
         .button {
-            background-color: black;
-            border: 1px solid red;
-            color: white;
+            background-color: white;
+            border: 0px solid black;
+            color: gray;
             padding: 15px 42px;
             text-align: center;
             text-decoration: none;
@@ -16,6 +16,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 10px;
+            box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
 
         }
         html {
@@ -27,7 +28,36 @@
             text-align: center;
             font-size: 14px;
             font-weight: bold;
-
+            box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        #clear{
+            background-color: #d9534f;
+            color: white;
+        }
+        #plus{
+            background-color: #f0ad4e;
+            color: darkslategray;
+        }
+        #minus{
+            background-color: #f0ad4e;
+            color: darkslategray;
+        }
+        #multiply{
+            background-color: #f0ad4e;
+            color: darkslategray;
+        }
+        #divide{
+            background-color: #f0ad4e;
+            color: darkslategray;
+        }
+        #equals{
+            background-color: yellow;
+            color: darkslategray;
+        }
+        table {
+            box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+            background-color: #9DD2EA;
         }
     </style>
 </head>
@@ -35,7 +65,7 @@
 
         <h1>Calculator</h1>
 <form name="calculator" id="calculator">
-<table border="2" align="center" bgcolor="gray">
+<table border="2" align="center">
 <tr>
     <td height="35">
         <input type="text" class="numbers" size="22" id="firstbox" maxlength="10" readonly>
@@ -46,34 +76,34 @@
 </tr>
     <tr>
         <td>
-            <button class="button" type="button" id="one">1</button>
-            <button class="button" type="button" id="two">2</button>
-            <button class="button" type="button" id="three">3</button>
-            <button class="button" type="button" id="plus">+</button>
+            <button class="button" type="button" id="one" name="button">1</button>
+            <button class="button" type="button" id="two" name="button">2</button>
+            <button class="button" type="button" id="three" name="button">3</button>
+            <button class="button" type="button" id="plus" name="button">+</button>
         </td>
     </tr>
     <tr>
         <td>
-            <button class="button" type="button" id="four">4</button>
-            <button class="button" type="button" id="five">5</button>
-            <button class="button" type="button" id="six">6</button>
-            <button class="button" type="button" id="minus">-</button>
+            <button class="button" type="button" id="four" name="button">4</button>
+            <button class="button" type="button" id="five" name="button">5</button>
+            <button class="button" type="button" id="six" name="button">6</button>
+            <button class="button" type="button" id="minus" name="button">-</button>
         </td>
     </tr>
     <tr>
         <td>
-            <button class="button" type="button" id="seven">7</button>
-            <button class="button" type="button" id="eight">8</button>
-            <button class="button" type="button" id="nine">9</button>
-            <button class="button" type="button" id="multiply">*</button>
+            <button class="button" type="button" id="seven" name="button">7</button>
+            <button class="button" type="button" id="eight" name="button">8</button>
+            <button class="button" type="button" id="nine" name="button">9</button>
+            <button class="button" type="button" id="multiply" name="button">*</button>
         </td>
     </tr>
     <tr>
         <td>
-            <button class="button" type="button" id="decimal">.</button>
-            <button class="button" type="button" id="zero">0</button>
-            <button class="button" type="button" id="equals">=</button>
-            <button class="button" type="button" id="divide">/</button>
+            <button class="button" type="button" id="decimal" name="button">.</button>
+            <button class="button" type="button" id="zero" name="button">0</button>
+            <button class="button" type="button" id="equals" name="button">=</button>
+            <button class="button" type="button" id="divide" name="button">/</button>
         </td>
     </tr>
     <tr>

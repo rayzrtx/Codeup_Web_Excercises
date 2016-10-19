@@ -147,26 +147,32 @@ function textDecimal () {
     if (empty == ""){
         var leftInput = document.getElementById("firstbox");
         leftInput.value += ".";
-    }else{
+        decimal.disabled = true;
+    }else {
         var rightInput = document.getElementById("thirdbox");
         rightInput.value += ".";
+        decimal.disabled = true;
     }
 }
 function textPlus () {
     var middleInput = document.getElementById("operatorbox");
     middleInput.value = "+";
+    decimal.disabled = false;
 }
 function textMinus () {
     var middleInput = document.getElementById("operatorbox");
     middleInput.value = "-";
+    decimal.disabled = false;
 }
 function textMultiply () {
     var middleInput = document.getElementById("operatorbox");
     middleInput.value = "*";
+    decimal.disabled = false;
 }
 function textDivide () {
     var middleInput = document.getElementById("operatorbox");
     middleInput.value = "/";
+    decimal.disabled = false;
 }
 function clearAll() {
         document.getElementById("calculator").reset();  //clear all windows in form
@@ -189,7 +195,7 @@ function hitEqualsButton() {
     };
 
     if (middleBox.value == "+") {
-        leftBox.value= add(parseFloat(leftBox.value), parseFloat(rightBox.value))
+        leftBox.value= add(parseFloat(leftBox.value), parseFloat(rightBox.value));
     }
     if (middleBox.value == "-") {
         leftBox.value = subtract(parseFloat(leftBox.value), parseFloat(rightBox.value))
