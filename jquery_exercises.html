@@ -7,7 +7,10 @@
         "use strict";
 
         $(document).ready(function() {
-            $('.codeup').css('border', 'solid red 1px'); //changing border to be a 1px width solid red line for all class="codeup"
+            $('p, li, h1').css('background-color', 'yellow'); //all p, li and h1 tags will be highlighted yellow
+            $('li').css('font-size', '30px')
+            var contents = $('h1').html();
+            alert(contents);
 
         });
     </script>
