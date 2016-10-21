@@ -7,12 +7,22 @@
         "use strict";
 
         $(document).ready(function() {
-            $('p, li, h1').css('background-color', 'yellow'); //all p, li and h1 tags will be highlighted yellow
-            $('li').css('font-size', '30px')
-            var contents = $('h1').html();
-            alert(contents);
-
+            //$('p, li, h1').css('background-color', 'yellow'); all p, li and h1 tags will be highlighted yellow
+            $('h1').click(function () {
+                $('h1').css('background-color', "teal"); //when an h1 element is clicked it will perform the function that turns background color to teal
+            });
+            $('p').dblclick(function () {   //change font size of all p elements to 30px when double clicked
+                $('p').css('font-size', '30px')
+            });
+            $('li').hover(      //change text color to red when hovering over all list items, to black when not hovering
+                    function () {
+                $(this).css('color', 'red')
+            },       function () {
+                $(this).css('color', 'black')
+            }
+            )
         });
+
     </script>
 </head>
 <body>
