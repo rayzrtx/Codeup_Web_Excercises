@@ -3,7 +3,7 @@
  */
 "use strict";
 
-var number1 = document.getElementById("one");       //calling each number button
+var number1 = document.getElementById("one");       //variable for each number
 var number2 = document.getElementById("two");
 var number3 = document.getElementById("three");
 var number4 = document.getElementById("four");

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps Exercise</title>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+<!-- div to hold map -->
+<div id="map-canvas"></div>
+<button id = "seaworld">SeaWorld</button>
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCB4TtDUiftqb6lmWjM4Z8B5Z9H2WrPl8"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+            (function() {
+                "use strict";
+
+                // Set our map options
+                var mapOptions = {
+                    // Set the zoom level
+                    zoom: 18,
+
+                    // This sets the center of the map at our location
+                    center: {
+                        lat:  29.475836,
+                        lng: -98.524898
+                    }
+                };
+                // Render the map
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                var raysPlace = { lat: 29.475836, lng: -98.524898 };
+                var iconBase = 'http://maps.gstatic.com/mapfiles/ms2/micons/';
+                var seaWorld = { lat: 32.7648, lng: -117.2266};
+                var currentLocation = raysPlace;
+                document.getElementById("seaworld").addEventListener("click", function () {
+                    currentLocation = seaWorld;
+                });
+
+
+                // Add the marker to our existing map
+                var marker = new google.maps.Marker({
+                    position: raysPlace,
+                    map: map,
+                    //animation: google.maps.Animation.DROP
+                    icon: iconBase + 'bar.png'
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: "Ray's Place"
+                });
+                marker.addListener('click', function() {
+                    // Open the window using our map and marker
+                    infowindow.open(map, marker);
+                })
+
+
+            })();
+
+</script>
+</body>
+</html>

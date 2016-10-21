@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+            var contents = $('#p2').html();
+            alert(contents);
+        });
+    </script>
+</head>
+<body>
+<h1 id="codeup">Hello Codeup</h1>
+<p class="paragraph" id="p1">
+    This is a random paragraph used for testing purposes. Using jQuery now! Yay!
+</p>
+<p class="paragraph" id="p2">So this is the second paragraph. Created to help learn jQuery.</p>
+<ul id="list1">
+    <li>List item one</li>
+    <li>List item two</li>
+    <li>List item three</li>
+</ul>
+<div class="randomediv">Random div item for testing purposes</div>
+</body>
+</html>
