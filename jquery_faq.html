@@ -17,7 +17,18 @@
                 event.preventDefault();
                 $('dd').toggleClass('invisible');   //the characteristics of any dd tag with class invisible will be toggled on and off on each click
             });
-        })
+
+            $('ul').each(function () {  //for each ul element, function is performed
+                $(this).children().first().css("font-weight", "bold"); //first child of each element ul (li) is made bold
+            });
+            $('li').click(function () {
+                $(this).parent().addClass('invisible'); //when any li item is clicked, the li items will become invisible under its parent
+            });
+            $('h3').click(function () {
+                $(this).next().removeClass("invisible"); //when any h3 header is clicked, the class disappear will be removed
+            });
+        });
+
     </script>
 </head>
 <body>
@@ -48,5 +59,27 @@
 
 </dl>
 <a href="#" id="show-answers">Click here for answers</a>
+<h1>National Parks</h1>
+<h3>Park 1</h3>
+<ul>
+    <li>Fact 1</li>
+    <li>Fact 2</li>
+    <li>Fact 3</li>
+    <li>Fact 4</li>
+</ul>
+<h3>Park 2</h3>
+<ul>
+    <li>Fact 1</li>
+    <li>Fact 2</li>
+    <li>Fact 3</li>
+    <li>Fact 4</li>
+</ul>
+<h3>Park 3</h3>
+<ul>
+    <li>Fact 1</li>
+    <li>Fact 2</li>
+    <li>Fact 3</li>
+    <li>Fact 4</li>
+</ul>
 </body>
 </html>
