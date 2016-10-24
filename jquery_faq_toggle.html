@@ -13,18 +13,16 @@
         "use strict";
 
         $(document).ready(function() {
-            $('#question').click(function() {   //when anything with id "show-answers" is clicked it will perform the function
-                $('dd').toggle();   //the characteristics of any dd tag will be toggled on and off on each click
+            $('#show-answers').click(function() {   //when anything with id "show-answers" is clicked it will perform the function
+                $('dd').fadeToggle("fast");   //the characteristics of any dd tag will be toggled on and off on each click
             });
 
             $('ul').each(function () {  //for each ul element, function is performed
                 $(this).children().first().css("font-weight", "bold"); //first child of each element ul (li) is made bold
             });
-            $('li').click(function () {
-                $(this).parent().hide(); //when any li item is clicked, the li items will become invisible under its parent
-            });
+
             $('h3').click(function () {
-                $(this).next().show(); //when any h3 header is clicked, the class disappear will be removed
+                $(this).next().fadeToggle(); //when any h3 header is clicked, it will toggle between hidden and not hidden
             });
         });
 
