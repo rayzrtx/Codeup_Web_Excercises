@@ -30,5 +30,29 @@
             "tool"
         ],
         "price": 10
-    }
+    }, {
+    "title": "Weed Eater",
+    "quantity": 125,
+    "categories": [
+        "tool",
+        "outdoor"
+    ],
+    "price": 2000
+    }, {
+    "title": "Weed Eater",
+    "quantity": 125,
+    "categories": [
+        "tool",
+        "outdoor"
+    ],
+    "price": 2000
+}, {
+    "title": "Weed Eater",
+    "quantity": 125,
+    "categories": [
+        "tool",
+        "outdoor"
+    ],
+    "price": 2000
+}
 ]
