@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        #weatherbox {
+            background-color: lightgray;
+            border-color: darkgrey;
+            text-align: center;
+            border: double;
+
+        }
+
+        body {
+            background-color: lightskyblue;
+        }
+
+    </style>
+</head>
+<body>
+<main class="container">
+    <h1>Weather Forecast</h1>
+    <div id="cityname" class="container"></div>
+    <div id="weatherbox" class="col-sm-4"></div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    (function () {
+        "use strict";
+
+        $.get("http://api.openweathermap.org/data/2.5/weather", {
+            APPID: "9881cf735cc8030311cc71cf1ba71226",
+            q: "San Antonio, TX",
+            units: "imperial"
+        }).done(function (data) {
+            console.log(data);
+            var maxTemp = data.main.temp_max;
+            var minTemp = data.main.temp_min;
+            var clouds = data.weather[0].description;
+            var humidity = data.main.humidity;
+            var windSpeed = data.wind.speed;
+            var pressure = data.main.pressure;
+            var weatherIcon = data.weather[0].icon;
+
+            $("#cityname").append("<h2>" + data.name + "</h2>");
+            $("#weatherbox").append("<h2>" + maxTemp + "°/" + minTemp + "°" + "</h2>" + "<p></p>" + "<img src='http://openweathermap.org/img/w/" + weatherIcon + ".png'>" + "<p></p>" + "Clouds: " + clouds + "<p></p>" + humidity + "% humidity" + "<p></p>" + "Wind: " + windSpeed + "<p></p>" + "Pressure: " + pressure);
+        });
+
+
+    })();
+</script>
+</html>
