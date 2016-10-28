@@ -66,6 +66,7 @@
                 $("#cityname").html("<h2>" + data.city.name + "</h2>");
                 console.log(latitude, longitude);
                 var numberOfDays = data.cnt;
+                var htmlString = "";
                 for (var i = 0; i < numberOfDays; i++) {
                     var maxTemp = data.list[i].temp.max;
                     var minTemp = data.list[i].temp.min;
@@ -75,8 +76,9 @@
                     var pressure = data.list[i].pressure;
                     var weatherIcon = data.list[i].weather[0].icon;
 
-                    $("#weatherbox").append("<div class = 'col-sm-4'>" + "<h2>" + maxTemp + "°/" + minTemp + "°" + "</h2>" + "<p></p>" + "<img src='http://openweathermap.org/img/w/" + weatherIcon + ".png'>" + "<p></p>" + "Clouds: " + clouds + "<p></p>" + humidity + "% humidity" + "<p></p>" + "Wind: " + windSpeed + "<p></p>" + "Pressure: " + pressure + "</div>");
+                    htmlString +="<div class = 'col-sm-4'>" + "<h2>" + maxTemp + "°/" + minTemp + "°" + "</h2>" + "<p></p>" + "<img src='http://openweathermap.org/img/w/" + weatherIcon + ".png'>" + "<p></p>" + "Clouds: " + clouds + "<p></p>" + humidity + "% humidity" + "<p></p>" + "Wind: " + windSpeed + "<p></p>" + "Pressure: " + pressure + "</div>";
                 }
+                $("#weatherbox").html(htmlString);
             });
         }
         $("#getweather").click(function () {
