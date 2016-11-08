@@ -16,7 +16,7 @@ a:hover {
     color: #333;
     text-shadow: none; /* Prevent inheritance from `body` */
     background-color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid teal;
 }
 
 
@@ -27,9 +27,9 @@ a:hover {
 html,
 body {
     height: 100%;
-    background-color: #565555;
-    background-image: url("nyc1.jpeg");
-    background-repeat: no-repeat;
+    background-color: black;
+    /*background: url("nyc1.jpeg");*/
+    background-repeat: repeat;
     background-size: cover;
 
 }
@@ -38,10 +38,59 @@ body {
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
-
+img {
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 4px;
+}
 body {
     padding-top: 50px;
 }
+
+
+#background {
+    background: url('img/foreground.png') 5% 5%, url('img/midground.png') 50% 50%, url('img/background.png') 90% 110%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-transition: left 300s linear;
+    -moz-transition: left 300s linear;
+    -o-transition: left 300s linear;
+    /*-ms-transition: left 300s linear;*/
+    transition: left 300s linear;
+}
+
+#experiment:target #background {
+    left: -5000px;
+}
+
+#experiment:hover #background {
+    left: -9999px;
+}
+#content {
+    margin: 3em 5em;
+    background-color: #333;
+    opacity: 0.85;
+    color: #ccc;
+    padding: 1em;
+    border: 2px solid teal;
+
+}
+
+#content p{
+    font-size: 18px;
+}
+
+/*#content h2 {
+    margin: 1em 0;
+    font-weight: bold;
+    font-size:  26px;
+    color: #fff;
+}*/
+
+
 .starter-template {
     padding: 40px 15px;
     text-align: center;
@@ -68,6 +117,10 @@ body {
 /* Padding for spacing */
 .inner {
     padding: 30px;
+}
+
+.navbar {
+    background-color: teal;
 }
 
 
