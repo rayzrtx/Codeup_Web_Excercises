@@ -116,20 +116,20 @@
             <h3 class="page-header">Related Projects</h3>
         </div>
 
-        <div class="col-sm-3 col-xs-6">
+        <div class="col-sm-3 col-xs-6 image-wrapper">
             <a href="portfolio2.html">
-                <img class="img-responsive portfolio-item" src="img/Calculator500x300.png"
+                <img class="img-responsive portfolio-item img-zoom" src="img/Calculator500x300.png"
                      alt="Screenshot of calculator project">
             </a>
         </div>
 
-        <div class="col-sm-3 col-xs-6">
+        <div class="col-sm-3 col-xs-6 image-wrapper">
             <a href="portfolio3.html">
-                <img class="img-responsive portfolio-item" src="img/weatherapi500x300.png" alt="Screenshot of Three Day forecast project">
+                <img class="img-responsive portfolio-item img-zoom" src="img/weatherapi500x300.png" alt="Screenshot of Three Day forecast project">
             </a>
         </div>
 
-        <div class="col-sm-3 col-xs-6">
+        <!--    <div class="col-sm-3 col-xs-6">
             <a href="portfolio4.html">
                 <img class="img-responsive portfolio-item" src="img/aptrent5_500x300.jpg" alt="cell phone using app">
             </a>
@@ -140,7 +140,7 @@
                 <img class="img-responsive portfolio-item" src="img/mooditapp6_500x300.jpg" alt="moodit app screenshot">
             </a>
         </div>
-
+    -->
     </div>
     <!-- /.row -->
 
@@ -160,7 +160,21 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="../../Desktop/startbootstrap-portfolio-item-gh-pages/js/jquery.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $('.img-zoom').hover(function() {
+            $(this).addClass('transition');
+
+        }, function() {
+            $(this).removeClass('transition');
+        });
+    });
+</script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../../Desktop/startbootstrap-portfolio-item-gh-pages/js/bootstrap.min.js"></script>

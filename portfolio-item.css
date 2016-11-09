@@ -6,12 +6,12 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .navbar {
-    background-color: teal;
+    background-color: #3b5998;
 }
 
 .portfolio-item {
@@ -25,4 +25,19 @@ footer {
 #logo {
     float: right;
     padding-top: 10px;
+}
+
+.img-zoom {
+    width: 190px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
 }
